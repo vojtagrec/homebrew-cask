@@ -12,5 +12,9 @@ cask "hhkb-keymap-tool" do
 
   pkg "HHKBkeymapTool_#{version.no_dots}ma.pkg"
 
-  uninstall pkgutil: "jp.co.pfu.hhkb-keymap-tool.pkg.V#{version}"
+  uninstall pkgutil: "jp.co.pfu.hhkb-keymap-tool.pkg.V#{version}",
+            delete:  [
+              "/Applications/hhkb-keymap-tool.app",
+              "/Applications/HHKB/",
+            ]
 end
